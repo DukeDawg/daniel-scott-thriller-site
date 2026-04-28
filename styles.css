@@ -701,3 +701,230 @@ h2 {
     to { opacity: 1; transform: translateY(0); }
   }
 }
+
+.series-map {
+  padding: clamp(4rem, 8vw, 7rem) 0 2rem;
+}
+
+.split-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, .75fr);
+  gap: clamp(1.5rem, 4vw, 4rem);
+  align-items: end;
+  max-width: none;
+}
+
+.split-heading > p {
+  margin-bottom: 1.1rem;
+  color: rgba(242,234,223,.74);
+  font-size: 1.25rem;
+  line-height: 1.45;
+}
+
+.series-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.series-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 430px;
+  padding: 1.35rem;
+  border: 1px solid rgba(214,196,168,.16);
+  background:
+    linear-gradient(145deg, rgba(242,234,223,.09), rgba(242,234,223,.026)),
+    radial-gradient(circle at 92% 8%, rgba(143,29,22,.26), transparent 12rem);
+  overflow: hidden;
+}
+
+.series-card::after {
+  content: "";
+  position: absolute;
+  inset: auto 1.35rem 1.35rem auto;
+  width: 5rem;
+  height: 1px;
+  background: var(--blood-hot);
+  opacity: .68;
+}
+
+.series-card-wide {
+  grid-column: span 3;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: minmax(0, .72fr) minmax(360px, 1fr);
+  gap: 0 2rem;
+  align-items: start;
+  border-color: rgba(212,58,40,.46);
+  background:
+    radial-gradient(circle at 85% 15%, rgba(212,58,40,.22), transparent 22rem),
+    linear-gradient(135deg, rgba(242,234,223,.11), rgba(242,234,223,.025));
+}
+
+.series-card-wide .series-kicker,
+.series-card-wide h3,
+.series-card-wide p,
+.series-card-wide .series-actions {
+  grid-column: 1;
+}
+
+.series-card-wide .series-books {
+  grid-column: 2;
+  grid-row: 1 / span 4;
+  margin: 0;
+}
+
+.series-kicker {
+  margin-bottom: .9rem;
+  color: var(--blood-hot);
+  font-family: var(--display);
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  font-size: .78rem;
+}
+
+.series-card h3 {
+  margin-bottom: .9rem;
+  font-family: var(--display);
+  text-transform: uppercase;
+  letter-spacing: -.035em;
+  font-size: clamp(2.25rem, 4vw, 4.2rem);
+  line-height: .92;
+}
+
+.series-card p {
+  color: rgba(242,234,223,.74);
+  line-height: 1.48;
+  font-size: 1.08rem;
+}
+
+.series-books {
+  display: grid;
+  gap: .55rem;
+  margin: .5rem 0 1.4rem;
+  padding-left: 1.35rem;
+  color: var(--bone);
+}
+
+.series-books li::marker {
+  color: var(--blood-hot);
+  font-family: var(--display);
+}
+
+.series-books a,
+.text-link {
+  color: var(--bone);
+  text-decoration-color: rgba(212,58,40,.65);
+  text-decoration-thickness: 1px;
+  text-underline-offset: .22em;
+}
+
+.series-books a:hover,
+.text-link:hover {
+  color: var(--ink);
+  text-decoration-color: var(--blood-hot);
+}
+
+.compact-list {
+  columns: 2;
+  column-gap: 2rem;
+}
+
+.series-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .9rem;
+  align-items: center;
+  margin-top: auto;
+}
+
+.button-small {
+  min-height: 2.85rem;
+  padding-inline: 1rem;
+  font-size: .78rem;
+  background: rgba(143,29,22,.5);
+  border-color: rgba(212,58,40,.62);
+}
+
+.order-note {
+  color: rgba(242,234,223,.68);
+  font-size: 1.1rem;
+  line-height: 1.45;
+}
+
+.order-lanes {
+  display: grid;
+  gap: .8rem;
+}
+
+.order-lanes a {
+  display: grid;
+  grid-template-columns: 4rem 1fr;
+  gap: .25rem 1rem;
+  padding: 1rem;
+  background: rgba(242,234,223,.045);
+  border: 1px solid rgba(214,196,168,.14);
+  text-decoration: none;
+  transition: transform .18s ease, border-color .18s ease, background .18s ease;
+}
+
+.order-lanes a:hover {
+  transform: translateX(4px);
+  border-color: rgba(212,58,40,.5);
+  background: rgba(143,29,22,.13);
+}
+
+.order-lanes span {
+  grid-row: span 2;
+  color: var(--blood-hot);
+  font-family: var(--display);
+  font-size: 2rem;
+}
+
+.order-lanes strong {
+  font-family: var(--display);
+  text-transform: uppercase;
+  letter-spacing: .03em;
+}
+
+.order-lanes em {
+  color: var(--ash);
+}
+
+@media (max-width: 900px) {
+  .split-heading,
+  .series-grid,
+  .series-card-wide {
+    grid-template-columns: 1fr;
+  }
+
+  .series-card-wide {
+    grid-column: auto;
+  }
+
+  .series-card-wide .series-kicker,
+  .series-card-wide h3,
+  .series-card-wide p,
+  .series-card-wide .series-actions,
+  .series-card-wide .series-books {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .compact-list {
+    columns: 1;
+  }
+}
+
+@media (max-width: 560px) {
+  .series-card,
+  .series-card-wide {
+    min-height: 0;
+  }
+
+  .order-lanes a {
+    grid-template-columns: 3rem 1fr;
+  }
+}
