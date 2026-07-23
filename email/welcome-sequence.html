@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Daniel Scott Welcome Sequence — Review</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400&amp;family=Oswald:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --paper: #080706;
+      --panel: #100e0b;
+      --ink: #f5ebdc;
+      --muted: #bfae98;
+      --dim: #8d7f70;
+      --blood: #8e1714;
+      --blood-hot: #df3728;
+      --line: #33302a;
+    }
+    * { box-sizing: border-box; }
+    html { background: var(--paper); color-scheme: dark; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        linear-gradient(rgba(8, 7, 6, .88), rgba(8, 7, 6, .96)),
+        repeating-linear-gradient(90deg, transparent 0 74px, rgba(255,255,255,.025) 75px);
+      color: var(--ink);
+      font-family: "Crimson Pro", Georgia, "Times New Roman", serif;
+    }
+    a { color: inherit; }
+    .shell { width: min(1080px, calc(100% - 36px)); margin: 0 auto; padding: 48px 0 64px; }
+    .topline { height: 3px; margin-bottom: 32px; background: linear-gradient(90deg, var(--blood-hot), var(--blood), transparent 82%); }
+    .kicker, .file, .cadence, .status {
+      font-family: Oswald, "Arial Narrow", Impact, Arial, sans-serif;
+      font-weight: 600;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+    .kicker { margin: 0 0 12px; color: var(--blood-hot); font-size: 13px; }
+    h1 {
+      max-width: 800px;
+      margin: 0;
+      font-family: Oswald, "Arial Narrow", Impact, Arial, sans-serif;
+      font-size: clamp(42px, 8vw, 88px);
+      font-weight: 600;
+      letter-spacing: -.025em;
+      line-height: .93;
+      text-transform: uppercase;
+    }
+    .deck { max-width: 720px; margin: 22px 0 0; color: var(--muted); font-size: 21px; line-height: 1.45; }
+    .status {
+      display: inline-block;
+      margin: 30px 0 0;
+      padding: 8px 11px;
+      border: 1px solid #53211c;
+      color: #e6b3a8;
+      background: #1a0d0a;
+      font-size: 11px;
+    }
+    .grid { display: grid; gap: 18px; margin-top: 42px; }
+    .card {
+      display: grid;
+      grid-template-columns: 86px 1fr auto;
+      gap: 24px;
+      align-items: center;
+      min-height: 190px;
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--blood);
+      background: rgba(16, 14, 11, .95);
+      text-decoration: none;
+      transition: border-color .16s ease, transform .16s ease, background .16s ease;
+    }
+    .card:hover, .card:focus-visible {
+      border-color: var(--blood-hot);
+      background: #15110e;
+      transform: translateX(4px);
+      outline: none;
+    }
+    .number {
+      font-family: Oswald, "Arial Narrow", Impact, Arial, sans-serif;
+      font-size: 56px;
+      font-weight: 600;
+      color: var(--blood-hot);
+      line-height: 1;
+      text-align: center;
+    }
+    .file { color: var(--dim); font-size: 11px; }
+    h2 {
+      margin: 7px 0 8px;
+      font-family: Oswald, "Arial Narrow", Impact, Arial, sans-serif;
+      font-size: clamp(26px, 4vw, 40px);
+      font-weight: 500;
+      line-height: 1.05;
+    }
+    .preheader { margin: 0; color: var(--muted); font-size: 18px; line-height: 1.35; }
+    .cadence { margin-top: 14px; color: #d9cbbc; font-size: 11px; }
+    .open {
+      min-width: 142px;
+      padding: 14px 18px;
+      border: 1px solid var(--blood-hot);
+      color: var(--ink);
+      font-family: Oswald, "Arial Narrow", Impact, Arial, sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .13em;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    .note {
+      margin-top: 28px;
+      padding: 22px 24px;
+      border-top: 1px solid var(--line);
+      color: var(--dim);
+      font-size: 15px;
+      line-height: 1.5;
+    }
+    @media (max-width: 720px) {
+      .shell { padding-top: 30px; }
+      .card { grid-template-columns: 58px 1fr; gap: 16px; padding: 22px 18px; }
+      .number { font-size: 42px; }
+      .open { grid-column: 1 / -1; width: 100%; }
+      .deck { font-size: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <div class="topline"></div>
+    <p class="kicker">The Case File · Sequence Review</p>
+    <h1>Daniel Scott Welcome Sequence</h1>
+    <p class="deck">Three messages that move from author identity into procedural, supernatural, and psychological dread.</p>
+    <p class="status">Review preview · MailerLite automation is not enabled</p>
+
+    <section class="grid" aria-label="Welcome sequence emails">
+      <a class="card" href="2026-07-hcu-book-one.html">
+        <span class="number">01</span>
+        <span>
+          <span class="file">Welcome File 1/3 · Heinous Crimes Unit</span>
+          <h2>Welcome to The Case File</h2>
+          <p class="preheader">Meet Daniel Scott. Then open <em>The Surgeon&rsquo;s Scalpel</em>.</p>
+          <span class="cadence">Immediately after confirmation</span>
+        </span>
+        <span class="open">Open Email</span>
+      </a>
+
+      <a class="card" href="2026-07-welcome-02-dark-pursuits.html">
+        <span class="number">02</span>
+        <span>
+          <span class="file">Welcome File 2/3 · Dark Pursuits</span>
+          <h2>The dead are not politely quiet.</h2>
+          <p class="preheader"><em>Dark Pursuits</em> begins with <em>A Friend of the Dead</em>.</p>
+          <span class="cadence">Two days after Welcome File 1</span>
+        </span>
+        <span class="open">Open Email</span>
+      </a>
+
+      <a class="card" href="2026-07-welcome-03-murderous-mind.html">
+        <span class="number">03</span>
+        <span>
+          <span class="file">Welcome File 3/3 · A Murderous Mind</span>
+          <h2>Five years without killing. Then the voice came back.</h2>
+          <p class="preheader">Step inside <em>A Murderous Mind</em> with <em>Hunter</em>.</p>
+          <span class="cadence">Three days after Welcome File 2</span>
+        </span>
+        <span class="open">Open Email</span>
+      </a>
+    </section>
+
+    <p class="note">These are the canonical review copies. Footer merge tags remain visible in a browser because MailerLite replaces them only inside a campaign or automation.</p>
+  </main>
+</body>
+</html>
